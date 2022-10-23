@@ -1,0 +1,39 @@
+<!-- EJS is a simple templating language that lets you generate HTML markup with plain JavaScript -->
+<section class="hero py-16">
+    <div class="container mx-auto flex items-center justify-between">
+        <div class="w-1/2">
+            <h6 class="text-lg"><em>have pre-onwed books?</em></h6>
+            <h1 class="text-3xl md:text-6xl font-bold">sell it here !...</h1>
+            <button class="btn-primary px-6 py-2 rounded-full text-white font-bold mt-4">Order Now</button>
+        </div>
+        <div class="w-1/2">
+            <img class="bg-cover bg-center ... rounded-lg" src="/img/book.jpg" alt="">
+        </div>
+    </div>
+</section>
+<section class="menu conatainer mx-auto py-8 pl-10">
+    <h1 class="text-xl font-bold mb-16">all books</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 cols-gap-12 row-gap-16">
+        <%books.forEach(function(book){ %>
+            <div class="w-full md:w-40">
+                <img class="h-40 mb-4 mx-auto" src="/img/<%=book.image%>" alt="">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">
+                        <%=book.name%>
+                    </h2>
+                    <span class="size py-1 px-4 rounded-full uppercase text-xs">
+                        <%=book.size%>
+                    </span>
+                    <div class="flex items-center justify-around mt-6">
+                        <span class="font-bold text-lg ">₹<%=book.price%></span>
+                        <button data-book="<%=JSON.stringify(book)%>"
+                            class=" btn-primary add-to-cart py-1 px-4 rounded-full flex items-center">
+                            <span class="ml-4 text-white">+</span>
+                            <span class="ml-4 text-white">Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <% })%>
+    </div>
+</section>
