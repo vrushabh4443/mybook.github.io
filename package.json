@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "book website for buying and cellinf old books",
   "main": "index.js",
+  "type":"module",
+  "engines": {
+    "node":"14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node server.js",
@@ -39,12 +43,14 @@
     "express-session": "^1.17.3",
     "moment": "^2.29.4",
     "mongoose": "^6.4.4",
+    "netlify-lambda": "^2.0.15",
     "node-dev": "^7.1.0",
     "notie": "^4.3.1",
     "noty": "^3.2.0-beta",
     "notyf": "^3.10.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "serverless-http": "^3.1.0",
     "socket.io": "^4.5.3",
     "toastr": "^2.1.4",
     "vue-toastification": "^2.0.0-rc.5",
